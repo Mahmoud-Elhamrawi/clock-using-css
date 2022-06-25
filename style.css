@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background: rgb(34, 29, 29);
+}
+#clock{
+    width: 200px;
+    height: 200px;
+    border: 3px solid red;
+    border-radius: 50%;
+    margin: 200px auto;
+    position: relative;
+}
+#clock::after{
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: aqua;
+    position: absolute;
+    border-radius: 50%;
+    left: 87px;
+    top: 87px;
+}
+
+#clock li{
+     list-style: none;
+     position: absolute;
+}
+.numbers{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.numbers span{
+    display: block;
+    color: #000;
+    font-size: 30px;
+
+}
+.numbers:nth-child(1)
+{
+    transform: rotate(30deg);
+}
+.numbers:nth-child(1) span
+{
+    transform: rotate(-30deg);
+}
+
+.numbers:nth-child(2)
+{
+    transform: rotate(60deg);
+}
+.numbers:nth-child(2) span
+{
+    transform: rotate(-60deg);
+}
+.numbers:nth-child(3)
+{
+    transform: rotate(90deg);
+}
+.numbers:nth-child(3) span
+{
+    transform: rotate(-90deg);
+}
+.numbers:nth-child(4)
+{
+    transform: rotate(120deg);
+}
+.numbers:nth-child(4) span
+{
+    transform: rotate(-120deg);
+}
+.numbers:nth-child(5)
+{
+    transform: rotate(150deg);
+}
+.numbers:nth-child(5) span
+{
+    transform: rotate(-150deg);
+}
+.numbers:nth-child(6)
+{
+    transform: rotate(180deg);
+}
+.numbers:nth-child(6) span
+{
+    transform: rotate(-180deg);
+}
+.numbers:nth-child(7)
+{
+    transform: rotate(210deg);
+}
+.numbers:nth-child(7) span
+{
+    transform: rotate(-210deg);
+}
+
+.numbers:nth-child(8)
+{
+    transform: rotate(240deg);
+}
+.numbers:nth-child(8) span
+{
+    transform: rotate(-240deg);
+}
+.numbers:nth-child(9)
+{
+    transform: rotate(270deg);
+}
+.numbers:nth-child(9) span
+{
+    transform: rotate(-270deg);
+}
+.numbers:nth-child(10)
+{
+    transform: rotate(300deg);
+}
+.numbers:nth-child(10) span
+{
+    transform: rotate(-300deg);
+}
+.numbers:nth-child(11)
+{
+    transform: rotate(330deg);
+}
+.numbers:nth-child(11) span
+{
+    transform: rotate(-330deg);
+}
+#seconds{
+    width: 100%;
+    height: 100%;
+    animation: sec 60s steps(60,end) infinite;
+}
+#seconds::after{
+    content: "";
+    width: 5px;
+    height: 67px;
+    background-color: blue;
+    position: absolute;
+    left: 48%;
+    top: 37px;
+}
+#minites{
+    width: 100%;
+    height: 100%;
+    animation: sec 3600s steps(60,end) infinite;
+
+}
+#minites::after{
+    content: "";
+    width: 5px;
+    height: 59px;
+    background-color: rgb(62, 195, 25);
+    position: absolute;
+    left: 54%;
+    top: 95px;
+    transform: rotate(-18deg);
+}
+#hours{
+    width: 100%;
+    height: 100%;
+    transform: rotate(34deg);}
+#hours::after{
+    content: "";
+    width: 9px;
+    height: 65px;
+    background-color: red;
+    position: absolute;
+    left: 48%;
+    top: 47%;
+
+
+}
+
+@keyframes sec {
+    to{
+        transform: rotate(360deg );
+    }
+    
+}
